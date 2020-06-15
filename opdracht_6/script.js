@@ -13,15 +13,16 @@ createLi.innerHTML = getAnimalName;
 
 const buttonRemoveFirst = document.getElementById("remove-first-item-button");
 buttonRemoveFirst.addEventListener("click", (event) => {
-let parent = document.getElementById("spotted-animals-list");
-let child = parent.querySelector(".spotted-animals-list-item")
-let removed = parent.removeChild(child);
-console.log(removed);
+const parent = document.getElementById("spotted-animals-list");
+let duck = parent.querySelector(".spotted-animals-list-item")
+let remove = parent.removeChild(parent.firstChild );
+let removeDuck = parent.removeChild(duck);
 })
 
+
 const buttonRemoveAll = document.getElementById("remove-all-button");
-buttonRemoveAll.addEventListener("click", (event) =>{
-let selectParent = document.getElementsByTagName("div");
-let removeAll = selectParent.innerHTML = "";
-console.log(removeAll);
+buttonRemoveAll.addEventListener("click", (event) => {
+let selectChild = document.querySelector("#spotted-animals-list")
+let removeAll = selectChild.innerHTML= "";
 })
+
